@@ -43,7 +43,7 @@ if (!$sql2) {
 		 die (mysqli_error($con));
 		 }
 else {
-	echo "<div class="alert alert-primary" role="alert"> Successfully registered! <a href= 'login.php'>Click here to Login </a>   </div> ";
+	echo "Successfully registered! <a href= 'login.php'>Click here to Login </a>";
 }
 }
 else {
