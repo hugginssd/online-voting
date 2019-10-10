@@ -16,7 +16,7 @@ include "header_voter.php";
                         <h6 class="card-subtitle mb-2 text-muted">Zanu PF</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="java">
+                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="Emmerson Dambudzo">
                             <label class="form-check-label" for="exampleRadios1">
                                 Click to vote
                             </label>
@@ -54,7 +54,7 @@ include "header_voter.php";
                         <h6 class="card-subtitle mb-2 text-muted">PPD</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="c++">
+                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="Nkosana Moyo">
                             <label class="form-check-label" for="exampleRadios1">
                                 Click to vote
                             </label>
@@ -74,7 +74,7 @@ include "header_voter.php";
                         <h6 class="card-subtitle mb-2 text-muted">MDC-T</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="php">
+                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="Nelson Chamisa">
                             <label class="form-check-label" for="exampleRadios1">
                                 Click to vote
                             </label>
@@ -96,7 +96,7 @@ include "header_voter.php";
                         <h6 class="card-subtitle mb-2 text-muted">People's Party</h6>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="python">
+                            <input class="form-check-input" type="radio" name="lan" id="exampleRadios1" value="Brian Mteki">
                             <label class="form-check-label" for="exampleRadios1">
                                 Click to vote
                             </label>

@@ -6,7 +6,7 @@ include "auth.php";
 include "header_voter.php";
 include "connection.php";
 ?>
-<h4> Welcome <?php echo $_SESSION['SESS_NAME']; ?> </h4>
+<!-- <h4> Welcome <?php echo $_SESSION['SESS_NAME']; ?> </h4> -->
 <?php
     $username = $_SESSION['SESS_NAME'];
         $query = 'SELECT status FROM voters WHERE username="'.$_SESSION['SESS_NAME'].'" AND status = "VOTED"';

@@ -20,21 +20,30 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 					<div class="form-group row">
 								<label for="inputFirstname3" class="col-sm-2 col-form-label">Firstname</label>
 								<div class="col-sm-10">
-									<input type="text" name="firstname" value="" class="form-control" id="inputFirstname3" placeholder="Firstname">
+									<input type="text" name="firstname" value="" class="form-control" id="inputFirstname3" placeholder="Firstname" required >
 								</div>
 					</div>
 							<br>
 					<div class="form-group row">
 								<label for="inputLastname3" class="col-sm-2 col-form-label">Lastname</label>
 								<div class="col-sm-10">
-									<input type="text" name="lastname" value="" class="form-control" id="inputLastname3" placeholder="Lastname">
+									<input type="text" name="lastname" value="" class="form-control" id="inputLastname3" placeholder="Lastname" required >
 								</div>
 					</div>
 							<br>
+							<!--Add DOB --> 
+							<div class="form-group row">
+								<label for="dateOfBirth" class="col-sm-2 col-form-label">DOB</label>
+								<div class="col-sm-10">
+									<input type="date" name="bday" max="2001-01-01" min="1000-01-01" class="form-control" id="dateOfBirth" required>
+								</div>
+							</div>
+							<br>
+
 					<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
 								<div class="col-sm-10">
-									<input type="email" name="username" value="" class="form-control" id="inputEmail3" placeholder="Username">
+									<input type="email" name="username" value="" class="form-control" id="inputEmail3" placeholder="Username" required>
 								</div>
 					</div>
 							<br>
