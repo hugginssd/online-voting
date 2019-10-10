@@ -15,7 +15,7 @@ if (mysqli_num_rows($sql) >0 ) {
 	$_SESSION['SESS_NAME'] = $member['username'];
 	$_SESSION['SESS_RANK'] = $member['rank'];
 	
-	if($member['rank']=='administrator'){
+	if($member['rank']=='admin'){
 			header("location: admin.php");
 			}
 			else if($member['rank']=='voter'){
@@ -23,12 +23,22 @@ if (mysqli_num_rows($sql) >0 ) {
 			}
 }
 else {
-	$error = "<center><h4><font color='#FF0000'>Incorrect Username or Password</h4></center></font>";
+	
+	$error = '<div class="form-group col-md-16">
+				<div class="alert alert-danger" role="alert">
+					Invalid username or password. Try again or contact the admin.
+				</div>
+			</div>';
 	include "login.php";
 }
 }
 else {
-	$error = "<center><h4><font color='#FF0000'>Invalid Username or Password</h4></center></font>";
+	
+	$error = '<div class="form-group col-md-16">
+				<div class="alert alert-danger" role="alert">
+					Invalid username or password. Try again or contact the admin.
+				</div>
+			</div>';
 	include "login.php";
 }
 ?>

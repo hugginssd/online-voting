@@ -11,9 +11,7 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 	<legend> <h3>Login for Voting </h3></legend> 
 		<br>
 </center>
-			<?php global $nam; echo $nam; ?>
-			<?php global $error; echo $error; ?>
-		<br>
+			
 <center>
 	<font size="4" >
 		<form action="login_action.php" method="post" id="myform" >
@@ -34,11 +32,18 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 				<br>
 				<br>
 				<input type="submit" class="btn btn-primary" name="login" value="login" > 
+				<br>
+				<br>
+				<div class="form-group row">
+					<?php global $nam; echo $nam; ?>
+					<?php global $error; echo $error; ?>
+			    </div>
+			<br>
 			</div>
 		</form>
 	</font>
 </center>
-
+			
 <script type="text/javascript" > 
 var frmvalidator = new Validator("myform");
 frmvalidator.addValidation("username" , "req" , "Please Enter Username");

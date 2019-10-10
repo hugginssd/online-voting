@@ -39,6 +39,14 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 								</div>
 							</div>
 							<br>
+							<!--PIN-->
+							<div class="form-group row">
+								<label for="pin1" class="col-sm-2 col-form-label">PIN</label>
+								<div class="col-sm-10">
+									<input type="number" name="pin" max="9999" min="0000" class="form-control" id="pin1" required>
+								</div>
+							</div>
+							<br>
 
 					<div class="form-group row">
 								<label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
@@ -63,13 +71,13 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 	</center>
 	<script type= "text/javascript" >
 	var frmvalidator = new Validator("myform"); 
-	frmvalidator.addValidation("firstname","req","Please enter student firstname"); 
+	frmvalidator.addValidation("firstname","req","Please enter your firstname"); 
 	frmvalidator.addValidation("firstname","maxlen=50");
-	frmvalidator.addValidation("lastname","req","Please enter student lastname"); 
+	frmvalidator.addValidation("lastname","req","Please enter your lastname"); 
 	frmvalidator.addValidation("lastname","maxlen=50");
-	frmvalidator.addValidation("username","req","Please enter student username"); 
+	frmvalidator.addValidation("username","req","Please enter your username"); 
 	frmvalidator.addValidation("username","maxlen=50");
-	frmvalidator.addValidation("password","req","Please enter student password"); 
+	frmvalidator.addValidation("password","req","Please enter your password"); 
 	frmvalidator.addValidation("password","minlen=6","Password must not be less than 6 characters.");
 </script>
 <?php include "footer.php" ;?>
