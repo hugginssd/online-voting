@@ -43,7 +43,7 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 							<div class="form-group row">
 								<label for="pin1" class="col-sm-2 col-form-label">PIN</label>
 								<div class="col-sm-10">
-									<input type="number" name="pin" max="9999" min="0000" class="form-control" id="pin1" required>
+									<input type="number" name="pin" max="9999" min="0000" class="form-control" placeholder="4-digit-pin"id="pin1" required>
 								</div>
 							</div>
 							<br>
