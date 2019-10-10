@@ -25,6 +25,9 @@ $pass = mysqli_real_escape_string($con,$_POST['password']);
 $pin = mysqli_real_escape_string($con, $_POST['pin']);
 $rank = "";
 
+
+
+
 $sq = mysqli_query($con, 'SELECT username FROM loginusers WHERE username="'.$_POST['username'].'"');
 $exist = mysqli_num_rows($sq);
 	if($pin==4912)

@@ -5,11 +5,11 @@ session_start();
 include "auth.php";
 include "header_admin.php"; 
 ?>
-<div class="wrapper-editor">
+<div class="wrapper-editor form-group mx-sm-3 mb-2">
 
   <div class="block my-4">
     <div class="d-flex justify-content-center">
-      <p class="h5 text-primary createShowP">0 row selected</p>
+      <p class="h5 text-success createShowP">0 row selected</p>
     </div>
   </div>
 
@@ -82,32 +82,32 @@ include "header_admin.php";
           <div class="modal-body mx-3">
             <div class="md-form mb-5">
               <input type="text" id="formNameEdit" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="formNameEdit">Name</label>
+              <label data-error="wrong" data-success="right" for="formNameEdit">Firstname</label>
             </div>
 
             <div class="md-form mb-5">
               <input type="text" id="formPositionEdit" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="formPositionEdit">Position</label>
+              <label data-error="wrong" data-success="right" for="formPositionEdit">Lastname</label>
             </div>
 
             <div class="md-form mb-5">
               <input type="text" id="formOfficeEdit" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="formOfficeEdit">Office</label>
+              <label data-error="wrong" data-success="right" for="formOfficeEdit">Username</label>
             </div>
 
             <div class="md-form mb-5">
               <input type="text" id="formAgeEdit" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="formAgeEdit">Age</label>
+              <label data-error="wrong" data-success="right" for="formAgeEdit">Vote Status</label>
             </div>
 
             <div class="md-form mb-5">
               <input type="text" id="formDateEdit" class="form-control datepicker">
-              <label data-error="wrong" data-success="right" for="formDateEdit">Date</label>
+              <label data-error="wrong" data-success="right" for="formDateEdit">Status</label>
             </div>
 
             <div class="md-form mb-5">
               <input type="text" id="formSalaryEdit" class="form-control validate">
-              <label data-error="wrong" data-success="right" for="formSalaryEdit">Salary</label>
+              <label data-error="wrong" data-success="right" for="formSalaryEdit">Rank</label>
             </div>
 
 
@@ -164,16 +164,16 @@ include "header_admin.php";
         <th class="th-sm">Lastname
 
         </th>
-        <th class="th-sm">Position
+        <th class="th-sm">Username
+
+        </th>
+        <th class="th-sm">Voting Status
 
         </th>
         <th class="th-sm">Status
 
         </th>
-        <th class="th-sm">Registration date
-
-        </th>
-        <th class="th-sm">Username
+        <th class="th-sm">Rank
 
         </th>
       </tr>
@@ -182,7 +182,7 @@ include "header_admin.php";
     <tbody>
     <?php 
 		include "connection.php";
-		$rs = $mysqli_query($con,"SELECT `voters`.`firstname` AS Firstname, `voters`.`lastname` AS Lastname, `voters`.`username` AS Username,
+		$rs = mysqli_query($con,"SELECT `voters`.`firstname` AS Firstname, `voters`.`lastname` AS Lastname, `voters`.`username` AS Username,
                                  `voters`.`status` AS VoteStatus, `loginusers`.`status` AS UserStatus, `loginusers`.`rank` AS Position 
                                  FROM `voters` 
                                  INNER JOIN `loginusers` 
@@ -191,15 +191,17 @@ include "header_admin.php";
             $firstname=$row->Firstname;
             $lastname=$row->Lastname;
             $username=$row->Username;
-            $vote=$mb->votecount;
+            $VoteStatus=$row->VoteStatus;
+            $UserStatus=$row->UserStatus;
+            $Position=$row->Position;
     	?>
       <tr>
-        <td><?php echo $row['Firstname']; ?></td>
-        <td><?php echo $row['Lastname']; ?></td>
-        <td><?php echo $row['Username']; ?></td>
-        <td><?php echo $row['VoteStatus']; ?></td>
-        <td><?php echo $row['UserStatus']; ?></td>
-        <td><?php echo $row['Position']; ?></td>
+        <td><?php echo $firstname; ?></td>
+        <td><?php echo $lastname; ?></td>
+        <td><?php echo $username; ?></td>
+        <td><?php echo $VoteStatus; ?></td>
+        <td><?php echo $UserStatus; ?></td>
+        <td><?php echo $Position; ?></td>
       </tr>
     </tbody>
     <?php } ?>

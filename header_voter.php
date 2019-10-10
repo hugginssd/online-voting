@@ -21,16 +21,16 @@
         <a class="nav-link text-white" href="voter.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="lan_view.php">Vote Results</a>
+        <a class="nav-link text-white" href="lan_view.php"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="profile.php">Profile</a>
+        <a class="nav-link text-white" href="profile.php"></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-white" href="logout.php">Logout</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="change_pass.php">Change Password</a>
+        <a class="nav-link text-white" href="change_pass.php"></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
