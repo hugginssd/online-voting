@@ -3,21 +3,21 @@ session_start();
 $captcha = "" ;
 include "connection.php"; 
 if(isset($_POST['submit'])) {
-	if (isset($_POST['g-recaptcha-response'])){
-          $captcha=$_POST['g-recaptcha-response'];
-        }
-        if(!$captcha){
-		  $error = "Please check captcha too";
-		  include ('register.php');
-		  exit();
-        }
-        $secretKey = "6LeD3hEUAAAAADNeeaGRfKmABjn1gnsXxrpdTa2J";
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
-        $responseKeys = json_decode($response,true);
-        if(intval($responseKeys["success"]) !== 1) {
-		  $error = "You are spammer !";
-        }
+	// if (isset($_POST['g-recaptcha-response'])){
+    //       $captcha=$_POST['g-recaptcha-response'];
+    //     }
+    //     if(!$captcha){
+	// 	  $error = "Please check captcha too";
+	// 	  include ('register.php');
+	// 	  exit();
+    //     }
+    //     $secretKey = "6LeD3hEUAAAAADNeeaGRfKmABjn1gnsXxrpdTa2J";
+    //     $ip = $_SERVER['REMOTE_ADDR'];
+    //     $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secretKey."&response=".$captcha."&remoteip=".$ip);
+    //     $responseKeys = json_decode($response,true);
+    //     if(intval($responseKeys["success"]) !== 1) {
+	// 	  $error = "You are spammer !";
+    //     }
 $name = mysqli_real_escape_string($con, $_POST['firstname']);
 $name2 = mysqli_real_escape_string($con,$_POST['lastname']);
 $name3 = mysqli_real_escape_string($con,$_POST['username']);

@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 05, 2017 at 09:00 AM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Oct 10, 2019 at 04:47 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -28,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `languages` (
   `lan_id` int(100) NOT NULL,
-  `fullname` varchar(10) NOT NULL,
+  `fullname` varchar(25) NOT NULL,
   `about` varchar(255) NOT NULL,
   `votecount` int(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -38,11 +40,10 @@ CREATE TABLE `languages` (
 --
 
 INSERT INTO `languages` (`lan_id`, `fullname`, `about`, `votecount`) VALUES
-(1, 'JAVA', 'java is', 5),
-(2, 'PYTHON', 'python is', 6),
-(3, 'C++', 'c++ is', 21),
-(4, 'PHP', 'php is', 17),
-(5, '.NET', '.net is ', 4);
+(2, 'Emmerson Dambudzo', 'emmerson is', 7),
+(3, 'Nkosana Moyo', 'nkosana is', 22),
+(4, 'Nelson Chamisa', 'chamisa is', 17),
+(5, 'Brian Mteki', 'dread is ', 5);
 
 -- --------------------------------------------------------
 
@@ -54,7 +55,7 @@ CREATE TABLE `loginusers` (
   `id` int(200) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `rank` varchar(80) NOT NULL DEFAULT 'voter',
+  `rank` varchar(80) NOT NULL,
   `status` varchar(10) NOT NULL DEFAULT 'ACTIVE'
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -70,7 +71,18 @@ INSERT INTO `loginusers` (`id`, `username`, `password`, `rank`, `status`) VALUES
 (43, 'niku19', 'ac61ebbe84c06debaa78c0a832330164', 'voter', 'ACTIVE'),
 (42, 'ejjhed', 'b3f70c0d1b269668e937741a5d5797ab', 'voter', 'ACTIVE'),
 (41, 'Anirban', '9a7108cfaa7f51efb5fcda9e9d4b7a90', 'voter', 'ACTIVE'),
-(40, 'dnddd', 'b5d165334b465a7fc42310750430b3f9', 'voter', 'ACTIVE');
+(40, 'dnddd', 'b5d165334b465a7fc42310750430b3f9', 'voter', 'ACTIVE'),
+(48, 'hmafigu@gmail.com', 'c93ccd78b2076528346216b3b2f701e6', 'voter', 'ACTIVE'),
+(49, 'mafiguhuggins@gmail.com', '0782326160', 'voter', 'ACTIVE'),
+(50, 'mafiguhuggins1@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'voter', 'ACTIVE'),
+(51, 'mafiguhugg@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'voter', 'ACTIVE'),
+(52, 'mafigins@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'voter', 'ACTIVE'),
+(53, 'ghuggins@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'voter', 'ACTIVE'),
+(54, 'mafigus@gmail.com', '209215a4319eafe62ac284c2b4b09bc0', 'voter', 'ACTIVE'),
+(55, 'mk@gmail.com', '9ab59deceaa671d4a9b42320967b067d', '', 'ACTIVE'),
+(56, 'mains@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'admin', 'ACTIVE'),
+(57, 'magg@gmail.com', '9ab59deceaa671d4a9b42320967b067d', 'voter', 'ACTIVE'),
+(58, 'ms@gmail.com', '7db7df642a54a41366f9b39bcd3bb32b', 'voter', 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -91,14 +103,26 @@ CREATE TABLE `voters` (
 --
 
 INSERT INTO `voters` (`firstname`, `lastname`, `username`, `status`, `voted`) VALUES
-('sdjdjdj', 'djdjddjj', 'helllo', 'VOTED', 'python'),
-('Anirban', 'oodoododo', 'jaha', 'NOTVOTED', NULL),
-('Anirban', 'Dutta', 'action', 'VOTED', 'php'),
-('Anirban', 'Dutta', 'arjun', 'NOTVOTED', NULL),
-('janemaan', 'lohiid', 'niku19', 'VOTED', 'c++'),
+('sdjdjdj', 'djdjddjj', 'helllo', 'VOTED', 'Emmerson Dambudzo'),
+('Barnabas', 'Danhire', 'Barnabas', 'NOTVOTED', NULL),
+('Barnabas', 'Danhire', 'action', 'VOTED', 'Nelson Chamisa'),
+('Barnabas', 'Danhire', 'arjun', 'NOTVOTED', NULL),
+('janemaan', 'lohiid', 'niku19', 'VOTED', 'Nkosana Moyo'),
 ('asdhk', 'ddddnd', 'ejjhed', 'NOTVOTED', NULL),
-('Anirban', 'Dutta', 'Anirban', 'VOTED', 'java'),
-('ndndnd', 'dhbhdd', 'dnddd', 'NOTVOTED', NULL);
+('Barnabas', 'Danhire', 'Anirban', 'VOTED', 'mai mujuru'),
+('ndndnd', 'dhbhdd', 'dnddd', 'NOTVOTED', NULL),
+('Huggins', 'Mafigu', 'hmafigu@gmail.com', 'VOTED', 'Brian Mteki'),
+('Huggins ', 'Mafigu', 'mafiguhuggins@gmail.com', 'VOTED', 'Emmerson Dambudzo'),
+('Huggins ', 'Mafigu', 'mafiguhuggins1@gmail.com', 'NOTVOTED', NULL),
+('Huggins ', 'Mafigu', 'mafiguhugg@gmail.com', 'VOTED', 'Nkosana Moyo'),
+('Huggins ', 'Mafigu', 'mafigins@gmail.com', 'VOTED', 'java'),
+('Huggins ', 'Mafigu', 'ghuggins@gmail.com', 'VOTED', 'Emmerson Dambudzo'),
+('Huggins ', 'Mafigu', 'mafigus@gmail.com', 'VOTED', 'Nkosana Moyo'),
+('Huggins ', 'Mafigu', 'ma@gmail.com', 'NOTVOTED', NULL),
+('Huggins ', 'Mafigu', 'mk@gmail.com', 'NOTVOTED', NULL),
+('Huggins ', 'Mafigu', 'mains@gmail.com', 'NOTVOTED', NULL),
+('Huggins ', 'Mafigu', 'magg@gmail.com', 'NOTVOTED', NULL),
+('Huggins ', 'Mafigu', 'ms@gmail.com', 'NOTVOTED', NULL);
 
 --
 -- Indexes for dumped tables
@@ -132,12 +156,14 @@ ALTER TABLE `voters`
 --
 ALTER TABLE `languages`
   MODIFY `lan_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `loginusers`
 --
 ALTER TABLE `loginusers`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-

@@ -1,12 +1,9 @@
-<?php include "header.php";
-session_start();
-if (isset($_SESSION['SESS_NAME'])!="") {
-	header("Location: voter.php");
-}
+<?php include "lan_view.php";
+
 ?>
 <?php global $msg; echo $msg;?>
 
-    <div class="alert alert-success" role="alert">
+    <!-- <div class="alert alert-success" role="alert">
         <h4 class="alert-heading">Welcome to Online Voting!</h4>
              <p>This system allows all registered users to vote for their favorite Presidential Canditate.</p>
              <p>
@@ -18,5 +15,5 @@ if (isset($_SESSION['SESS_NAME'])!="") {
         <hr>
             <p class="mb-0">In order to make a vote you have to register first and then login.</p>
     </div>
-    <p>&nbsp;&nbsp;</p>
+    <p>&nbsp;&nbsp;</p> -->
 <?php include "footer.php";?>

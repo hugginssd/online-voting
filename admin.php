@@ -47,7 +47,7 @@ include "header_admin.php";
             <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
                 <div class="card-header">FAILED REGISTRATIONS</div>
                 <div class="card-body">
-                    <h5 class="card-title">15 Failed attempts</h5>
+                    <h5 class="card-title">0 Failed attempts</h5>
                     <p class="card-text">Failed attempts may be due to cyberattacking.</p>
                 </div>
             </div>
@@ -56,7 +56,7 @@ include "header_admin.php";
             <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
                 <div class="card-header">LOGGED IN</div>
                 <div class="card-body">
-                    <h5 class="card-title">15 Logged in now</h5>
+                    <h5 class="card-title">1 Logged in now</h5>
                     <p class="card-text">Logged in users, administration inclusive.</p>
                 </div>
             </div>

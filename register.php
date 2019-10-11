@@ -61,9 +61,9 @@ if (isset($_SESSION['SESS_NAME'])!="") {
 									<input type="password" name="password" value="" class="form-control" id="inputPassword3" placeholder="Password">
 								</div>
 					</div>
-								<br>
+								<!-- <br>
 									<div class="g-recaptcha" data-sitekey="6LeD3hEUAAAAAKne6ua3iVmspK3AdilgB6dcjST0"></div> 
-								<br>
+								<br> -->
 							<br>
 						<input type="submit" class="btn btn-primary" name="submit" value="Next" />
 				</div>

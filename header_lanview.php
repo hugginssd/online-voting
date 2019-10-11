@@ -18,16 +18,19 @@
     <a class="navbar-brand text-white" href="lan_view.php">Online voting</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="admin.php">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" href="lan_view.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="users.php">Manage Users</a>
+        <a class="nav-link text-white" href="lan_view.php"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="logout.php">Logout</a>
+        <a class="nav-link text-white" href="register.php">Register</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="change_pass.php">Change Password</a>
+        <a class="nav-link text-white" href="login.php">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="change_pass.php"></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
